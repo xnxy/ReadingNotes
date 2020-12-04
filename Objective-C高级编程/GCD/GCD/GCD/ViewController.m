@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "GCD-Swift.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor systemTealColor];
 //    [self function];
-    [self function8];
-    NSLog(@"----%@---",NSHomeDirectory());
+//    [self function8];
+//    NSLog(@"----%@---",NSHomeDirectory());
 }
 
 - (void)function{
@@ -343,5 +344,11 @@
         [[NSFileManager defaultManager] createFileAtPath:filePath contents:totalData attributes:nil];
     });
 }
+
+- (IBAction)nextButtonAction:(id)sender {
+    NextViewController *vc = [NextViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end
