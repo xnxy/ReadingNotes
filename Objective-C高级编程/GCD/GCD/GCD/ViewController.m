@@ -238,6 +238,7 @@
         NSLog(@"---1---");
         dispatch_semaphore_signal(semaphore);
     });
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t) 1 * NSEC_PER_SEC);
     long result = dispatch_semaphore_wait(semaphore, time);
